@@ -10,6 +10,10 @@ class Home{
      */
     public static function getHome()
     {
-        return View::render('pages/home');
+        return View::render('pages/home',[
+            'name' => "Teste de conteudo",
+            'description' => "Mais um teste de conteudo",
+            'site' => "www.conteudo.com.br"
+        ]);
     }
 }
