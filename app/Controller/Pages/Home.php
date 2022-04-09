@@ -2,7 +2,7 @@
 namespace App\Controller\Pages;
 use App\Utils\View;
 
-class Home{
+class Home extends Page{
     
     /**
      * Metodo responsavel por retornar o caminho [View] da Home
@@ -10,10 +10,12 @@ class Home{
      */
     public static function getHome()
     {
-        return View::render('pages/home',[
+        $content = View::render('pages/home',[
             'name' => "Teste de conteudo",
             'description' => "Mais um teste de conteudo",
             'site' => "www.conteudo.com.br"
         ]);
+
+        return parent::getPage('pages',$content);
     }
 }
