@@ -2,9 +2,11 @@
 require(__DIR__."/vendor/autoload.php");
 
 use \App\Controller\Pages\Home;
+use \App\Http\Router;
 
-$value = new \App\Http\Response(500,'Olá mundo');
+define('APP_URL','http://localhost/PHP-2022/WDEV-MVC');
 
-dump($value->sendResponse());
+$obRouter = new Router(APP_URL);
+dump($obRouter);
 
 echo Home::getHome();
